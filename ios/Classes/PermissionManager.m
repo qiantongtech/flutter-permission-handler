@@ -75,8 +75,6 @@
 
 + (id)createPermissionStrategy:(PermissionGroup)permission {
     switch (permission) {
-        case PermissionGroupCalendar:
-            return [EventPermissionStrategy new];
         case PermissionGroupCamera:
             return [AudioVideoPermissionStrategy new];
         case PermissionGroupContacts:
@@ -89,16 +87,8 @@
             return [MediaLibraryPermissionStrategy new];
         case PermissionGroupMicrophone:
             return [AudioVideoPermissionStrategy new];
-        case PermissionGroupPhone:
-            return [PhonePermissionStrategy new];
         case PermissionGroupPhotos:
             return [PhotoPermissionStrategy new];
-        case PermissionGroupReminders:
-            return [EventPermissionStrategy new];
-        case PermissionGroupSensors:
-            return [SensorPermissionStrategy new];
-        case PermissionGroupSpeech:
-            return [SpeechPermissionStrategy new];
         case PermissionGroupNotification:
             return [NotificationPermissionStrategy new];
         case PermissionGroupStorage:
